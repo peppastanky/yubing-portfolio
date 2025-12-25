@@ -1,3 +1,3 @@
-# Portfolio Website
+# yubing-portfolio
 
-Work in progress.
+Portfolio Website - Work in progress.
