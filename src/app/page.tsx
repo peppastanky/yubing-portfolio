@@ -25,11 +25,61 @@ export default function HomePage() {
         position: 'relative',
         overflow: 'hidden'
       }} className="hero-section">
+        {/* Animated Blue Halo Background */}
+        <motion.div
+          style={{
+            position: 'absolute',
+            top: '20%',
+            left: '10%',
+            width: '900px',
+            height: '900px',
+            background: 'radial-gradient(circle, rgba(79, 125, 255, 0.4) 0%, rgba(79, 125, 255, 0.2) 40%, transparent 70%)',
+            filter: 'blur(100px)',
+            borderRadius: '50%',
+            zIndex: 0
+          }}
+          animate={{
+            x: ['0%', '80%', '0%'],
+            y: ['0%', '60%', '0%'],
+            scale: [1, 1.3, 1]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          style={{
+            position: 'absolute',
+            top: '60%',
+            left: '80%',
+            width: '700px',
+            height: '700px',
+            background: 'radial-gradient(circle, rgba(79, 125, 255, 0.35) 0%, rgba(79, 125, 255, 0.15) 40%, transparent 70%)',
+            filter: 'blur(90px)',
+            borderRadius: '50%',
+            zIndex: 0
+          }}
+          animate={{
+            x: ['0%', '-100%', '0%'],
+            y: ['0%', '-70%', '0%'],
+            scale: [1, 0.8, 1]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
         <div style={{ 
           maxWidth: '1400px', 
           width: '100%',
           padding: '2rem',
-          textAlign: 'center'
+          textAlign: 'center',
+          position: 'relative',
+          zIndex: 1
         }}>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -72,7 +122,7 @@ export default function HomePage() {
               style={{ 
                 fontSize: 'clamp(1rem, 2vw, 1.5rem)',
                 color: '#A1A1AA',
-                marginBottom: '3rem',
+                marginBottom: '1.5rem',
                 fontWeight: '300',
                 maxWidth: '900px',
                 margin: '0 auto 3rem'
@@ -90,7 +140,7 @@ export default function HomePage() {
               display: 'flex', 
               gap: '1.5rem',
               justifyContent: 'center',
-              marginBottom: '3rem',
+              marginBottom: '1.5rem',
               flexWrap: 'wrap'
             }}
             initial={{ opacity: 0, y: 20 }}
@@ -102,7 +152,7 @@ export default function HomePage() {
                 href="#projects"
                 style={{ 
                   padding: '1rem 2.5rem',
-                  fontSize: '1.1rem',
+                  fontSize: '0.95rem',
                   backgroundColor: '#4F7DFF', 
                   color: '#EDEDED', 
                   borderRadius: '0.5rem', 
@@ -128,10 +178,10 @@ export default function HomePage() {
                 href="#contact"
                 style={{ 
                   padding: '1rem 2.5rem',
-                  fontSize: '1.1rem',
+                  fontSize: '0.95rem',
                   backgroundColor: 'transparent', 
                   color: '#EDEDED',
-                  border: '2px solid #4F7DFF', 
+                  border: '1px solid #4F7DFF', 
                   borderRadius: '0.5rem', 
                   transition: 'all 0.3s',
                   display: 'inline-block',
@@ -157,7 +207,8 @@ export default function HomePage() {
               display: 'flex', 
               gap: '1.5rem',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
+              marginBottom: '1.5rem'
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -187,7 +238,7 @@ export default function HomePage() {
                 }}
                 aria-label="Email"
               >
-                <Mail size={24} />
+                <Mail size={15} />
               </a>
             </MagneticButton>
             <MagneticButton strength={0.3}>
@@ -216,7 +267,7 @@ export default function HomePage() {
                 }}
                 aria-label="LinkedIn"
               >
-                <Linkedin size={24} />
+                <Linkedin size={15} />
               </a>
             </MagneticButton>
             <MagneticButton strength={0.3}>
@@ -231,7 +282,8 @@ export default function HomePage() {
                   borderRadius: '50%', 
                   transition: 'all 0.3s',
                   display: 'inline-flex',
-                  color: '#4F7DFF'
+                  color: '#4F7DFF',
+                  
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#4F7DFF';
@@ -245,45 +297,50 @@ export default function HomePage() {
                 }}
                 aria-label="GitHub"
               >
-                <Github size={24} />
+                <Github size={15} />
               </a>
             </MagneticButton>
           </motion.div>
 
           {/* Scroll Indicator */}
-          <motion.div
+          {/* <motion.a
+            href="#projects"
             style={{
               position: 'absolute',
-              bottom: '3rem',
+              bottom: '0rem',
               left: '50%',
               transform: 'translateX(-50%)',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              gap: '0.5rem',
+              gap: '0.35rem',
               color: '#A1A1AA',
-              fontSize: '0.875rem',
+              fontSize: '0.65rem',
               letterSpacing: '0.1em',
-              textTransform: 'uppercase'
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+              textDecoration: 'none',
+              transition: 'color 0.3s'
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
+            whileHover={{ color: '#4F7DFF' }}
           >
             <span>Scroll</span>
             <motion.div
-              animate={{ y: [0, 8, 0] }}
+              animate={{ y: [0, 6, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
-              <ArrowRight size={20} style={{ transform: 'rotate(90deg)' }} />
+              <ArrowRight size={10} style={{ transform: 'rotate(90deg)' }} />
             </motion.div>
-          </motion.div>
+          </motion.a> */}
         </div>
       </section>
 
       {/* Featured Projects */}
       <ParallaxSection offset={30}>
-        <section id="projects" style={{ backgroundColor: '#15151A', padding: '4rem 0' }} className="projects-section">
+        <section id="projects" style={{ backgroundColor: '#15151A', padding: '0 0 4rem 0' }} className="projects-section">
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
             <ScrollReveal direction="up">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3rem' }}>
