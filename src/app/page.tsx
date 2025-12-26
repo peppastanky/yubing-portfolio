@@ -2,9 +2,8 @@ import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { ProjectCard } from '@/components/ProjectCard';
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { SkillChip } from '@/components/SkillChip';
-import { LeadershipList } from '@/components/LeadershipList';
 import { projects } from '@/data/projects';
-import { experiences, leadership } from '@/data/experience';
+import { experiences } from '@/data/experience';
 import { skills } from '@/data/skills';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { MagneticButton } from '@/components/animations/MagneticButton';
@@ -18,158 +17,273 @@ export default function HomePage() {
   return (
     <div style={{ width: '100%' }}>
       {/* Hero Section */}
-      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '5rem 1.5rem 6rem' }} className="hero-section">
-        <div style={{ maxWidth: '56rem' }}>
-          <motion.h1 
-            style={{ marginBottom: '1.5rem' }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+      <section style={{ 
+        minHeight: '100vh', 
+        display: 'flex', 
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        overflow: 'hidden'
+      }} className="hero-section">
+        <div style={{ 
+          maxWidth: '1400px', 
+          width: '100%',
+          padding: '2rem',
+          textAlign: 'center'
+        }}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            <TextReveal>Lim Yu Bing</TextReveal>
-          </motion.h1>
-          <motion.p 
-            style={{ fontSize: '1.25rem', color: '#9CA3AF', marginBottom: '1.5rem' }} 
-            className="hero-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Information Systems undergraduate at SMU • Building user-focused web apps
-          </motion.p>
-          <motion.p 
-            style={{ fontSize: '1.125rem', color: '#9CA3AF', marginBottom: '2rem', maxWidth: '42rem' }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Passionate about creating intuitive web experiences that solve real problems. 
-            Currently exploring the intersection of design and development.
-          </motion.p>
+            <motion.p 
+              style={{ 
+                fontSize: 'clamp(1rem, 3vw, 2rem)',
+                color: '#A1A1AA',
+                marginBottom: '1rem',
+                fontWeight: '300',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase'
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Hi, I am
+            </motion.p>
+            <motion.h1 
+              style={{ 
+                fontSize: 'clamp(3rem, 10vw, 8rem)',
+                fontWeight: '700',
+                lineHeight: '0.9',
+                marginBottom: '2rem',
+                background: 'linear-gradient(135deg, #EDEDED 0%, #4F7DFF 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              YU BING
+            </motion.h1>
+            <motion.p 
+              style={{ 
+                fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+                color: '#A1A1AA',
+                marginBottom: '3rem',
+                fontWeight: '300',
+                maxWidth: '900px',
+                margin: '0 auto 3rem'
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Information Systems Student • Web Developer • Designer
+            </motion.p>
+          </motion.div>
           
           <motion.div 
-            style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}
+            style={{ 
+              display: 'flex', 
+              gap: '1.5rem',
+              justifyContent: 'center',
+              marginBottom: '3rem',
+              flexWrap: 'wrap'
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <MagneticButton>
               <a
                 href="#projects"
                 style={{ 
-                  padding: '0.75rem 1.5rem', 
-                  backgroundColor: '#6366F1', 
-                  color: 'white', 
+                  padding: '1rem 2.5rem',
+                  fontSize: '1.1rem',
+                  backgroundColor: '#4F7DFF', 
+                  color: '#EDEDED', 
                   borderRadius: '0.5rem', 
-                  transition: 'background-color 0.2s',
-                  display: 'inline-block'
+                  transition: 'all 0.3s',
+                  display: 'inline-block',
+                  fontWeight: '500',
+                  letterSpacing: '0.05em'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4F46E5'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#6366F1'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#3D6AE6';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
               >
-                View Projects
+                VIEW WORK
               </a>
             </MagneticButton>
             <MagneticButton>
               <a
                 href="#contact"
                 style={{ 
-                  padding: '0.75rem 1.5rem', 
-                  backgroundColor: '#161620', 
-                  color: '#F5F5F7',
-                  border: '1px solid #2A2A35', 
+                  padding: '1rem 2.5rem',
+                  fontSize: '1.1rem',
+                  backgroundColor: 'transparent', 
+                  color: '#EDEDED',
+                  border: '2px solid #4F7DFF', 
                   borderRadius: '0.5rem', 
-                  transition: 'border-color 0.2s',
-                  display: 'inline-block'
+                  transition: 'all 0.3s',
+                  display: 'inline-block',
+                  fontWeight: '500',
+                  letterSpacing: '0.05em'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = '#6366F1'}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = '#2A2A35'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
               >
-                Contact Me
+                GET IN TOUCH
               </a>
             </MagneticButton>
           </motion.div>
 
           <motion.div 
-            style={{ display: 'flex', gap: '1rem' }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            style={{ 
+              display: 'flex', 
+              gap: '1.5rem',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
           >
-            <FloatingElement delay={0}>
-              <MagneticButton strength={0.2}>
-                <a
-                  href="mailto:yyubingg@gmail.com"
-                  style={{ 
-                    padding: '0.75rem', 
-                    backgroundColor: '#161620', 
-                    border: '1px solid #2A2A35', 
-                    borderRadius: '0.5rem', 
-                    transition: 'border-color 0.2s',
-                    display: 'inline-flex',
-                    color: '#F5F5F7'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.borderColor = '#6366F1'}
-                  onMouseLeave={(e) => e.currentTarget.style.borderColor = '#2A2A35'}
-                  aria-label="Email"
-                >
-                  <Mail size={20} />
-                </a>
-              </MagneticButton>
-            </FloatingElement>
-            <FloatingElement delay={0.2}>
-              <MagneticButton strength={0.2}>
-                <a
-                  href="https://www.linkedin.com/in/limyubing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ 
-                    padding: '0.75rem', 
-                    backgroundColor: '#161620', 
-                    border: '1px solid #2A2A35', 
-                    borderRadius: '0.5rem', 
-                    transition: 'border-color 0.2s',
-                    display: 'inline-flex',
-                    color: '#F5F5F7'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.borderColor = '#6366F1'}
-                  onMouseLeave={(e) => e.currentTarget.style.borderColor = '#2A2A35'}
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={20} />
-                </a>
-              </MagneticButton>
-            </FloatingElement>
-            <FloatingElement delay={0.4}>
-              <MagneticButton strength={0.2}>
-                <a
-                  href="https://github.com/limyubing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ 
-                    padding: '0.75rem', 
-                    backgroundColor: '#161620', 
-                    border: '1px solid #2A2A35', 
-                    borderRadius: '0.5rem', 
-                    transition: 'border-color 0.2s',
-                    display: 'inline-flex',
-                    color: '#F5F5F7'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.borderColor = '#6366F1'}
-                  onMouseLeave={(e) => e.currentTarget.style.borderColor = '#2A2A35'}
-                  aria-label="GitHub"
-                >
-                  <Github size={20} />
-                </a>
-              </MagneticButton>
-            </FloatingElement>
+            <MagneticButton strength={0.3}>
+              <a
+                href="mailto:yyubingg@gmail.com"
+                style={{ 
+                  padding: '1rem', 
+                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
+                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  borderRadius: '50%', 
+                  transition: 'all 0.3s',
+                  display: 'inline-flex',
+                  color: '#4F7DFF'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.color = '#EDEDED';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#4F7DFF';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+                aria-label="Email"
+              >
+                <Mail size={24} />
+              </a>
+            </MagneticButton>
+            <MagneticButton strength={0.3}>
+              <a
+                href="https://www.linkedin.com/in/limyubing"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ 
+                  padding: '1rem', 
+                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
+                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  borderRadius: '50%', 
+                  transition: 'all 0.3s',
+                  display: 'inline-flex',
+                  color: '#4F7DFF'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.color = '#EDEDED';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#4F7DFF';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+            </MagneticButton>
+            <MagneticButton strength={0.3}>
+              <a
+                href="https://github.com/limyubing"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ 
+                  padding: '1rem', 
+                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
+                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  borderRadius: '50%', 
+                  transition: 'all 0.3s',
+                  display: 'inline-flex',
+                  color: '#4F7DFF'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.color = '#EDEDED';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#4F7DFF';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+                aria-label="GitHub"
+              >
+                <Github size={24} />
+              </a>
+            </MagneticButton>
+          </motion.div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            style={{
+              position: 'absolute',
+              bottom: '3rem',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '0.5rem',
+              color: '#A1A1AA',
+              fontSize: '0.875rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase'
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
+            <span>Scroll</span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ArrowRight size={20} style={{ transform: 'rotate(90deg)' }} />
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Featured Projects */}
       <ParallaxSection offset={30}>
-        <section id="projects" style={{ backgroundColor: '#161620', padding: '4rem 0' }} className="projects-section">
+        <section id="projects" style={{ backgroundColor: '#15151A', padding: '4rem 0' }} className="projects-section">
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
             <ScrollReveal direction="up">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3rem' }}>
@@ -181,7 +295,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#6366F1', 
+                      color: '#4F7DFF', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -221,7 +335,7 @@ export default function HomePage() {
           {skills.map((category, categoryIndex) => (
             <ScrollReveal key={category.category} delay={categoryIndex * 0.1} direction="left">
               <div>
-                <h3 style={{ marginBottom: '1rem', color: '#9CA3AF' }}>
+                <h3 style={{ marginBottom: '1rem', color: '#71717A' }}>
                   {category.category}
                 </h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
@@ -237,7 +351,7 @@ export default function HomePage() {
 
       {/* Experience Snapshot */}
       <ParallaxSection offset={40}>
-        <section id="experience" style={{ backgroundColor: '#161620', padding: '4rem 0' }} className="experience-section">
+        <section id="experience" style={{ backgroundColor: '#15151A', padding: '4rem 0' }} className="experience-section">
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
             <ScrollReveal direction="up">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3rem' }}>
@@ -249,7 +363,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#6366F1', 
+                      color: '#4F7DFF', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -279,25 +393,15 @@ export default function HomePage() {
         </section>
       </ParallaxSection>
 
-      {/* Leadership & Community */}
-      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 1.5rem' }} className="leadership-section">
-        <ScrollReveal direction="up">
-          <h2 style={{ marginBottom: '3rem' }}>Leadership & Community</h2>
-        </ScrollReveal>
-        <ScrollReveal delay={0.2} direction="up">
-          <LeadershipList items={leadership} />
-        </ScrollReveal>
-      </section>
-
       {/* CTA Section */}
       <ParallaxSection offset={50}>
-        <section id="contact" style={{ backgroundColor: '#161620', padding: '4rem 0' }} className="cta-section">
+        <section id="contact" style={{ backgroundColor: '#15151A', padding: '4rem 0' }} className="cta-section">
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center' }}>
             <ScrollReveal direction="up">
               <h2 style={{ marginBottom: '1.5rem' }}>Interested in building something together?</h2>
             </ScrollReveal>
             <ScrollReveal delay={0.2} direction="up">
-              <p style={{ fontSize: '1.25rem', color: '#9CA3AF', marginBottom: '2rem', maxWidth: '42rem', margin: '0 auto 2rem' }}>
+              <p style={{ fontSize: '1.25rem', color: '#A1A1AA', marginBottom: '2rem', maxWidth: '42rem', margin: '0 auto 2rem' }}>
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </ScrollReveal>
@@ -310,13 +414,13 @@ export default function HomePage() {
                     alignItems: 'center', 
                     gap: '0.5rem', 
                     padding: '1rem 2rem', 
-                    backgroundColor: '#6366F1', 
-                    color: 'white', 
+                    backgroundColor: '#4F7DFF', 
+                    color: '#EDEDED', 
                     borderRadius: '0.5rem', 
                     transition: 'background-color 0.2s' 
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4F46E5'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#6366F1'}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3D6AE6'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4F7DFF'}
                 >
                   <span>Get in touch</span>
                   <ArrowRight size={20} />
@@ -331,7 +435,7 @@ export default function HomePage() {
         @media (min-width: 768px) {
           .hero-section { padding: 8rem 2rem !important; }
           .hero-subtitle { font-size: 1.5rem !important; }
-          .projects-section, .experience-section, .skills-section, .leadership-section, .cta-section { padding: 6rem 0 !important; }
+          .projects-section, .experience-section, .skills-section, .cta-section { padding: 6rem 0 !important; }
           .projects-grid, .experience-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>

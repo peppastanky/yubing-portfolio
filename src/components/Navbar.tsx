@@ -22,12 +22,12 @@ function NavItem({ item, index }: { item: typeof navigation[0]; index: number })
       <motion.a
         href={item.href}
         style={{ 
-          color: '#9CA3AF', 
+          color: '#A1A1AA', 
           transition: 'color 0.2s', 
           display: 'block',
           paddingBottom: '0.5rem'
         }}
-        animate={{ color: isHovered ? '#F5F5F7' : '#9CA3AF' }}
+        animate={{ color: isHovered ? '#EDEDED' : '#A1A1AA' }}
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -41,7 +41,7 @@ function NavItem({ item, index }: { item: typeof navigation[0]; index: number })
           left: 0,
           right: 0,
           height: '2px',
-          backgroundColor: '#6366F1',
+          backgroundColor: '#4F7DFF',
           transformOrigin: 'center'
         }}
         initial={{ scaleX: 0 }}
@@ -72,7 +72,7 @@ export function Navbar() {
         zIndex: 50, 
         backgroundColor: scrolled ? 'rgba(11, 11, 15, 0.95)' : 'rgba(11, 11, 15, 0.8)',
         backdropFilter: 'blur(12px)',
-        borderBottom: '2px solid #6366F1',
+        borderBottom: '2px solid #4F7DFF',
         transition: 'background-color 0.3s'
       }}
       initial={{ y: -100 }}
@@ -84,8 +84,8 @@ export function Navbar() {
           {/* Logo */}
           <motion.a 
             href="#" 
-            style={{ fontSize: '1.25rem', fontWeight: 600, color: '#F5F5F7', transition: 'color 0.2s' }}
-            whileHover={{ scale: 1.05, color: '#6366F1' }}
+            style={{ fontSize: '1.25rem', fontWeight: 600, color: '#EDEDED', transition: 'color 0.2s' }}
+            whileHover={{ scale: 1.05, color: '#4F7DFF' }}
             whileTap={{ scale: 0.95 }}
           >
             LYB
@@ -101,8 +101,8 @@ export function Navbar() {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
-                whileHover={{ scale: 1.1, color: '#F5F5F7', rotate: 5 }}
+                style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
+                whileHover={{ scale: 1.1, color: '#EDEDED', rotate: 5 }}
                 aria-label="Resume"
               >
                 <FileText size={20} />
@@ -111,8 +111,8 @@ export function Navbar() {
                 href="https://www.linkedin.com/in/limyubing"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
-                whileHover={{ scale: 1.1, color: '#F5F5F7', rotate: 5 }}
+                style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
+                whileHover={{ scale: 1.1, color: '#EDEDED', rotate: 5 }}
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -121,8 +121,8 @@ export function Navbar() {
                 href="https://github.com/limyubing"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
-                whileHover={{ scale: 1.1, color: '#F5F5F7', rotate: 5 }}
+                style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
+                whileHover={{ scale: 1.1, color: '#EDEDED', rotate: 5 }}
                 aria-label="GitHub"
               >
                 <Github size={20} />
@@ -133,11 +133,11 @@ export function Navbar() {
           {/* Mobile menu button */}
           <motion.button
             type="button"
-            style={{ color: '#9CA3AF', background: 'none', border: 'none', cursor: 'pointer' }}
+            style={{ color: '#A1A1AA', background: 'none', border: 'none', cursor: 'pointer' }}
             className="mobile-menu-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
-            whileHover={{ scale: 1.1, color: '#F5F5F7' }}
+            whileHover={{ scale: 1.1, color: '#EDEDED' }}
             whileTap={{ scale: 0.9 }}
           >
             <AnimatePresence mode="wait">
@@ -171,12 +171,12 @@ export function Navbar() {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  style={{ display: 'block', color: '#9CA3AF', marginBottom: '0.75rem', transition: 'color 0.2s' }}
+                  style={{ display: 'block', color: '#A1A1AA', marginBottom: '0.75rem', transition: 'color 0.2s' }}
                   onClick={() => setMobileMenuOpen(false)}
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.05 }}
-                  whileHover={{ x: 5, color: '#F5F5F7' }}
+                  whileHover={{ x: 5, color: '#EDEDED' }}
                 >
                   {item.name}
                 </motion.a>
@@ -191,8 +191,8 @@ export function Navbar() {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
-                  whileHover={{ scale: 1.1, color: '#F5F5F7' }}
+                  style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
+                  whileHover={{ scale: 1.1, color: '#EDEDED' }}
                   aria-label="Resume"
                 >
                   <FileText size={20} />
@@ -201,8 +201,8 @@ export function Navbar() {
                   href="https://www.linkedin.com/in/limyubing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
-                  whileHover={{ scale: 1.1, color: '#F5F5F7' }}
+                  style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
+                  whileHover={{ scale: 1.1, color: '#EDEDED' }}
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
@@ -211,8 +211,8 @@ export function Navbar() {
                   href="https://github.com/limyubing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
-                  whileHover={{ scale: 1.1, color: '#F5F5F7' }}
+                  style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
+                  whileHover={{ scale: 1.1, color: '#EDEDED' }}
                   aria-label="GitHub"
                 >
                   <Github size={20} />

@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-background: #0B0B0F;
-  --color-surface: #161620;
-  --color-surface-hover: #1E1E28;
-  --color-border: #2A2A35;
-  --color-text-primary: #F5F5F7;
-  --color-text-secondary: #9CA3AF;
-  --color-accent: #6366F1;
-  --color-accent-hover: #4F46E5;
+  /* Colors - Professional Dark Theme */
+  --color-background: #0B0B0F;        /* Deep charcoal base */
+  --color-surface: #15151A;            /* Card/surface background */
+  --color-surface-hover: #1C1C23;      /* Hovered surface state */
+  --color-border: #27272F;             /* Subtle borders */
+  --color-border-muted: #1A1A1F;       /* Very subtle borders */
+  --color-text-primary: #EDEDED;       /* Soft white text */
+  --color-text-secondary: #A1A1AA;     /* Muted gray text */
+  --color-text-muted: #71717A;         /* De-emphasized text */
+  --color-accent: #4F7DFF;             /* Cool blue accent */
+  --color-accent-hover: #3D6AE6;       /* Darker blue on hover */
+  --color-accent-muted: #2D4A99;       /* Muted accent for backgrounds */
 
   /* Spacing */
   --spacing-section: 6rem;
@@ -32,7 +35,7 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
   background-color: #0B0B0F;
-  color: #F5F5F7;
+  color: #EDEDED;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -111,13 +114,13 @@ html {
 
 /* Selection styles */
 ::selection {
-  background-color: rgba(99, 102, 241, 0.3);
-  color: #F5F5F7;
+  background-color: rgba(79, 125, 255, 0.25);
+  color: #EDEDED;
 }
 
 ::-moz-selection {
-  background-color: rgba(99, 102, 241, 0.3);
-  color: #F5F5F7;
+  background-color: rgba(79, 125, 255, 0.25);
+  color: #EDEDED;
 }
 
 /* Custom scrollbar */
@@ -130,12 +133,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A35;
+  background: #27272F;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6366F1;
+  background: #4F7DFF;
 }
 
 @media (max-width: 768px) {
