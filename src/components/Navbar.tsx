@@ -41,7 +41,7 @@ function NavItem({ item, index }: { item: typeof navigation[0]; index: number })
           left: 0,
           right: 0,
           height: '2px',
-          backgroundColor: '#4F7DFF',
+          backgroundColor: '#71717A',
           transformOrigin: 'center'
         }}
         initial={{ scaleX: 0 }}
@@ -72,7 +72,7 @@ export function Navbar() {
         zIndex: 50, 
         backgroundColor: scrolled ? 'rgba(11, 11, 15, 0.95)' : 'rgba(11, 11, 15, 0.8)',
         backdropFilter: 'blur(12px)',
-        borderBottom: '2px solid #4F7DFF',
+        borderBottom: '2px solid #71717A',
         transition: 'background-color 0.3s'
       }}
       initial={{ y: -100 }}

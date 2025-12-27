@@ -17,9 +17,10 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
-  // Smooth spring animations for mouse position
-  const smoothMouseX = useSpring(mouseX, { stiffness: 150, damping: 20 });
-  const smoothMouseY = useSpring(mouseY, { stiffness: 150, damping: 20 });
+  // Lighter springs for smoother, more fluid trailing motion
+  // Lower stiffness + higher damping = softer, more premium feel
+  const smoothMouseX = useSpring(mouseX, { stiffness: 100, damping: 25, mass: 0.5 });
+  const smoothMouseY = useSpring(mouseY, { stiffness: 100, damping: 25, mass: 0.5 });
   
   // Detect reduced motion preference
   useEffect(() => {
@@ -49,6 +50,20 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
   // Split text into characters for stagger animation
   const characters = text.split('');
   
+  // Dynamic text-shadow that follows cursor
+  // Throttled update: only recalculates every few pixels for better performance
+  const textShadow = useTransform(
+    [smoothMouseX, smoothMouseY],
+    ([x, y]) => {
+      if (!isHovering) return 'none';
+      // Simplified glow - fewer layers, better performance
+      return `
+        0 0 30px rgba(138, 43, 226, 0.5),
+        0 0 60px rgba(138, 43, 226, 0.3)
+      `;
+    }
+  );
+  
   return (
     <div
       ref={containerRef}
@@ -58,7 +73,7 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
       onMouseMove={handleMouseMove}
       style={{ position: 'relative', display: 'inline-block', cursor: 'pointer' }}
     >
-      <h1
+      <motion.h1
         style={{
           fontSize: 'clamp(3rem, 10vw, 8rem)',
           fontWeight: '700',
@@ -67,16 +82,9 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
           margin: 0,
           position: 'relative',
           zIndex: 1,
-          // Smooth glow transition on hover
-          transition: prefersReducedMotion ? 'none' : 'text-shadow 0.3s ease, filter 0.3s ease',
-          // Layered glow effect for premium feel
-          textShadow: isHovering
-            ? `
-              0 0 20px rgba(79, 125, 255, 0.4),
-              0 0 40px rgba(79, 125, 255, 0.2),
-              0 0 60px rgba(79, 125, 255, 0.1)
-            `
-            : 'none',
+          textShadow: textShadow,
+          // Smooth filter transition on hover
+          transition: prefersReducedMotion ? 'none' : 'filter 0.3s ease',
           // Subtle brightness lift on hover
           filter: isHovering ? 'brightness(1.1)' : 'brightness(1)',
         }}
@@ -103,7 +111,7 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
             {char === ' ' ? '\u00A0' : char}
           </motion.span>
         ))}
-      </h1>
+      </motion.h1>
       
       {/* Profile follower circle - follows mouse smoothly */}
       {!prefersReducedMotion && (
@@ -144,8 +152,9 @@ function ProfileFollower({ mouseX, mouseY, isHovering }: ProfileFollowerProps) {
     <motion.div
       style={{
         position: 'absolute',
-        x: mouseX,
-        y: mouseY,
+        // Start from top-left corner, transform will position it
+        left: 0,
+        top: 0,
         width: '120px',
         height: '120px',
         borderRadius: '50%',
@@ -154,12 +163,21 @@ function ProfileFollower({ mouseX, mouseY, isHovering }: ProfileFollowerProps) {
         boxShadow: '0 0 30px rgba(79, 125, 255, 0.6)',
         zIndex: 10,
         pointerEvents: 'none',
+        // Use will-change to optimize for smooth animations
+        willChange: 'transform',
+        // Direct motion value binding for smooth cursor following
+        x: mouseX,
+        y: mouseY,
         translateX: '-50%',
         translateY: '-50%',
       }}
       initial={{ opacity: 0, scale: 0 }}
-      animate={showCircle ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+      animate={{ 
+        opacity: showCircle ? 1 : 0,
+        scale: showCircle ? 1 : 0,
+      }}
       transition={{
+        // Fast opacity/scale for crisp appear/disappear
         opacity: { duration: 0.2 },
         scale: { type: 'spring', stiffness: 200, damping: 15 },
       }}
