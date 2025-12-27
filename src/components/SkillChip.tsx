@@ -1,23 +1,33 @@
+import { motion } from 'framer-motion';
+
 interface SkillChipProps {
   skill: string;
 }
 
 export function SkillChip({ skill }: SkillChipProps) {
   return (
-    <span 
+    <motion.span 
       style={{ 
         padding: '0.5rem 1rem', 
-        backgroundColor: '#161620', 
-        border: '1px solid #2A2A35', 
+        backgroundColor: '#15151A', 
+        border: '1px solid #27272F', 
         borderRadius: '9999px', 
-        color: '#F5F5F7', 
+        color: '#EDEDED', 
         transition: 'border-color 0.2s',
-        display: 'inline-block'
+        display: 'inline-block',
+        cursor: 'default'
       }}
-      onMouseEnter={(e) => e.currentTarget.style.borderColor = '#6366F1'}
-      onMouseLeave={(e) => e.currentTarget.style.borderColor = '#2A2A35'}
+      whileHover={{ 
+        scale: 1.05,
+        borderColor: '#4F7DFF',
+        transition: { duration: 0.2 }
+      }}
+      whileTap={{ scale: 0.95 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
     >
       {skill}
-    </span>
+    </motion.span>
   );
 }
