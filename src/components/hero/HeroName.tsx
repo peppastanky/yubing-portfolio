@@ -113,6 +113,83 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
         ))}
       </motion.h1>
       
+      {/* Premium subtle hover indicator - gradient line */}
+      <motion.div
+        style={{
+          position: 'absolute',
+          bottom: '0',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 'clamp(80px, 20%, 100px)',
+          height: '2px',
+          background: 'linear-gradient(90deg, transparent, #4F7DFF, transparent)',
+          pointerEvents: 'none',
+          zIndex: 20
+        }}
+        initial={{ opacity: 0, scaleX: 0 }}
+        animate={{ 
+          opacity: isHovering ? 0 : [0, 0.6, 0.6, 0],
+          scaleX: isHovering ? 0 : [0, 1, 1, 0]
+        }}
+        transition={{ 
+          duration: 3,
+          delay: 2,
+          times: [0, 0.2, 0.8, 1],
+          ease: "easeInOut"
+        }}
+      />
+      
+      {/* Pulsing dot indicator */}
+      {!prefersReducedMotion && (
+        <motion.div
+          style={{
+            position: 'absolute',
+            top: '0',
+            right: '-20px',
+            width: '6px',
+            height: '6px',
+            borderRadius: '50%',
+            backgroundColor: '#4F7DFF',
+            pointerEvents: 'none',
+            zIndex: 20
+          }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ 
+            opacity: isHovering ? 0 : [0, 0.8, 0.8, 0],
+            scale: isHovering ? 0 : [0, 1, 1, 0]
+          }}
+          transition={{ 
+            duration: 3,
+            delay: 2,
+            times: [0, 0.2, 0.8, 1],
+            ease: "easeInOut"
+          }}
+        >
+          <motion.div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              backgroundColor: '#4F7DFF',
+              opacity: 0.4
+            }}
+            animate={{
+              scale: [1, 2, 1],
+              opacity: [0.4, 0, 0.4]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </motion.div>
+      )}
+      
       {/* Profile follower circle - follows mouse smoothly */}
       {!prefersReducedMotion && (
         <ProfileFollower 
