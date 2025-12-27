@@ -12,8 +12,19 @@ import { TextReveal } from '@/components/animations/TextReveal';
 import { GlowingCard } from '@/components/animations/GlowingCard';
 import { ParallaxSection } from '@/components/animations/ParallaxSection';
 import { motion } from 'framer-motion';
-
+import { useState } from 'react';
 export default function HomePage() {
+  const [isHovering, setIsHovering] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLHeadingElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
   return (
     <div style={{ width: '100%' }}>
       {/* Hero Section */}
@@ -101,23 +112,84 @@ export default function HomePage() {
             >
               Hi, I am
             </motion.p>
-            <motion.h1 
-              style={{ 
-                fontSize: 'clamp(3rem, 10vw, 8rem)',
-                fontWeight: '700',
-                lineHeight: '0.9',
-                marginBottom: '2rem',
-                background: 'linear-gradient(135deg, #EDEDED 0%, #4F7DFF 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-            >
-              YU BING
-            </motion.h1>
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <motion.h1 
+                style={{ 
+                  fontSize: 'clamp(3rem, 10vw, 8rem)',
+                  fontWeight: '700',
+                  lineHeight: '0.9',
+                  marginBottom: '2rem',
+                  cursor: 'pointer',
+                  display: 'inline-block',
+                  position: 'relative'
+                }}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                onMouseMove={handleMouseMove}
+                whileHover={{
+                  scaleY: 1.02,
+                  skewX: -1,
+                  letterSpacing: '0.02em'
+                }}
+              >
+                <span
+                  style={{ 
+                    background: 'linear-gradient(135deg, #EDEDED 0%, #4F7DFF 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    display: 'inline-block',
+                    filter: isHovering ? 'blur(1px)' : 'blur(0px)',
+                    transition: 'filter 0.3s'
+                  }}
+                >
+                  YU BING
+                </span>
+              </motion.h1>
+              
+              {/* Profile Image Circle that follows mouse */}
+              <motion.div
+                style={{
+                  position: 'absolute',
+                  top: mousePosition.y,
+                  left: mousePosition.x,
+                  width: '120px',
+                  height: '120px',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  border: '3px solid #4F7DFF',
+                  boxShadow: '0 0 30px rgba(79, 125, 255, 0.6)',
+                  zIndex: 10,
+                  pointerEvents: 'none',
+                  transform: 'translate(-50%, -50%)'
+                }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={isHovering ? { 
+                  opacity: 1, 
+                  scale: 1
+                } : { 
+                  opacity: 0, 
+                  scale: 0
+                }}
+                transition={{ 
+                  opacity: { duration: 0.2 },
+                  scale: { duration: 0.3, ease: 'easeOut' }
+                }}
+              >
+                <img 
+                  src="/profile.jpg" 
+                  alt="Yu Bing"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+              </motion.div>
+            </div>
             <motion.p 
               style={{ 
                 fontSize: 'clamp(1rem, 2vw, 1.5rem)',
