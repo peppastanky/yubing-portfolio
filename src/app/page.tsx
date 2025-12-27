@@ -135,54 +135,65 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <MagneticButton>
+            <MagneticButton strength={0.15}>
               <a
                 href="#projects"
                 style={{ 
                   padding: '1rem 2.5rem',
                   fontSize: '0.95rem',
-                  backgroundColor: '#4F7DFF', 
+                  backgroundColor: 'rgba(79, 125, 255, 0.25)', 
                   color: '#EDEDED', 
                   borderRadius: '0.5rem', 
-                  transition: 'all 0.3s',
+                  transition: 'all 0.2s ease',
                   display: 'inline-block',
                   fontWeight: '500',
-                  letterSpacing: '0.05em'
+                  letterSpacing: '0.05em',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(79, 125, 255, 0.4)',
+                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#3D6AE6';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.35)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.6)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#4F7DFF';
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.25)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)';
                 }}
               >
                 VIEW WORK
               </a>
             </MagneticButton>
-            <MagneticButton>
+            <MagneticButton strength={0.15}>
               <a
                 href="#contact"
                 style={{ 
                   padding: '1rem 2.5rem',
                   fontSize: '0.95rem',
-                  backgroundColor: 'transparent', 
+                  backgroundColor: 'rgba(255, 255, 255, 0.03)', 
                   color: '#EDEDED',
-                  border: '1px solid #4F7DFF', 
+                  border: '1px solid rgba(79, 125, 255, 0.3)', 
                   borderRadius: '0.5rem', 
-                  transition: 'all 0.3s',
+                  transition: 'all 0.2s ease',
                   display: 'inline-block',
                   fontWeight: '500',
-                  letterSpacing: '0.05em'
+                  letterSpacing: '0.05em',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#4F7DFF';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.15)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
               >
                 GET IN TOUCH
@@ -202,7 +213,7 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <MagneticButton strength={0.3}>
+            <MagneticButton strength={0.2}>
               <a
                 href="mailto:yyubingg@gmail.com"
                 style={{ 
@@ -210,26 +221,31 @@ export default function HomePage() {
                   backgroundColor: 'rgba(79, 125, 255, 0.1)', 
                   border: '1px solid rgba(79, 125, 255, 0.3)', 
                   borderRadius: '50%', 
-                  transition: 'all 0.3s',
+                  transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF'
+                  color: '#4F7DFF',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
                   e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="Email"
               >
                 <Mail size={15} />
               </a>
             </MagneticButton>
-            <MagneticButton strength={0.3}>
+            <MagneticButton strength={0.2}>
               <a
                 href="https://www.linkedin.com/in/limyubing"
                 target="_blank"
@@ -239,26 +255,31 @@ export default function HomePage() {
                   backgroundColor: 'rgba(79, 125, 255, 0.1)', 
                   border: '1px solid rgba(79, 125, 255, 0.3)', 
                   borderRadius: '50%', 
-                  transition: 'all 0.3s',
+                  transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF'
+                  color: '#4F7DFF',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
                   e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="LinkedIn"
               >
                 <Linkedin size={15} />
               </a>
             </MagneticButton>
-            <MagneticButton strength={0.3}>
+            <MagneticButton strength={0.2}>
               <a
                 href="https://github.com/limyubing"
                 target="_blank"
@@ -268,20 +289,24 @@ export default function HomePage() {
                   backgroundColor: 'rgba(79, 125, 255, 0.1)', 
                   border: '1px solid rgba(79, 125, 255, 0.3)', 
                   borderRadius: '50%', 
-                  transition: 'all 0.3s',
+                  transition: 'all 0.2s ease',
                   display: 'inline-flex',
                   color: '#4F7DFF',
-                  
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#4F7DFF';
+                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
                   e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="GitHub"
               >
