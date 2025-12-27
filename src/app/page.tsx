@@ -215,7 +215,7 @@ export default function HomePage() {
           >
             <MagneticButton strength={0.2}>
               <a
-                href="mailto:yyubingg@gmail.com"
+                href="mailto:yubing.lim.2024@computing.smu.edu.sg"
                 style={{ 
                   padding: '1rem', 
                   backgroundColor: 'rgba(79, 125, 255, 0.1)', 
@@ -351,6 +351,81 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section id="about" style={{ 
+        backgroundColor: '#0B0B0F',
+        padding: '6rem 0',
+        borderTop: '1px solid #2A2A35'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <ScrollReveal direction="up">
+            <h2 style={{ marginBottom: '3rem' }}>About Me</h2>
+          </ScrollReveal>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: '1fr',
+            gap: '3rem',
+            alignItems: 'center'
+          }} className="about-grid">
+            <ScrollReveal delay={0.2} direction="right">
+              <div style={{ 
+                display: 'flex',
+                justifyContent: 'center'
+              }} className="about-image">
+                <img 
+                  src="/profile.jpg" 
+                  alt="Profile" 
+                  style={{ 
+                    width: '250px',
+                    height: '250px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    border: '3px solid rgba(79, 125, 255, 0.3)',
+                    boxShadow: '0 10px 40px rgba(79, 125, 255, 0.2)'
+                  }}
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2} direction="left">
+              <div style={{ 
+                padding: '2rem',
+                backgroundColor: 'rgba(79, 125, 255, 0.05)',
+                border: '1px solid rgba(79, 125, 255, 0.1)',
+                borderRadius: '1rem',
+                backdropFilter: 'blur(10px)'
+              }}>
+                <p style={{ 
+                  fontSize: '1.125rem', 
+                  lineHeight: '1.8',
+                  color: '#E5E7EB',
+                  marginBottom: '1.5rem'
+                }}>
+                  I'm a passionate software developer with a love for creating elegant solutions to complex problems. 
+                  My journey in tech has been driven by curiosity and a constant desire to learn and grow.
+                </p>
+                <p style={{ 
+                  fontSize: '1.125rem', 
+                  lineHeight: '1.8',
+                  color: '#E5E7EB',
+                  marginBottom: '1.5rem'
+                }}>
+                  With expertise in full-stack development, I enjoy working on projects that challenge me to think 
+                  creatively and push the boundaries of what's possible with modern web technologies.
+                </p>
+                <p style={{ 
+                  fontSize: '1.125rem', 
+                  lineHeight: '1.8',
+                  color: '#E5E7EB'
+                }}>
+                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
+                  or sharing knowledge with the developer community.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Projects */}
       <ParallaxSection offset={30}>
         <section id="projects" style={{ backgroundColor: '#15151A', padding: '0 0 4rem 0' }} className="projects-section">
@@ -478,7 +553,7 @@ export default function HomePage() {
             <ScrollReveal delay={0.3} direction="up">
               <MagneticButton>
                 <a
-                  href="mailto:yyubingg@gmail.com"
+                  href="mailto:yubing.lim.2024@computing.smu.edu.sg"
                   style={{ 
                     display: 'inline-flex', 
                     alignItems: 'center', 
@@ -507,6 +582,8 @@ export default function HomePage() {
           .hero-subtitle { font-size: 1.5rem !important; }
           .projects-section, .experience-section, .skills-section, .cta-section { padding: 6rem 0 !important; }
           .projects-grid, .experience-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .about-grid { grid-template-columns: 300px 1fr !important; }
+          .about-image { justify-content: flex-start !important; }
         }
       `}</style>
     </div>

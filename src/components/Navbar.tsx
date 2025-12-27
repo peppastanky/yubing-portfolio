@@ -15,7 +15,7 @@ function NavItem({ item, index }: { item: typeof navigation[0]; index: number })
 
   return (
     <div 
-      style={{ position: 'relative', marginRight: '2rem' }}
+      style={{ position: 'relative', padding: '0 1.5rem' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -33,6 +33,65 @@ function NavItem({ item, index }: { item: typeof navigation[0]; index: number })
         transition={{ duration: 0.3, delay: index * 0.1 }}
       >
         {item.name}
+      </motion.a>
+      <motion.div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '2px',
+          backgroundColor: '#71717A',
+          transformOrigin: 'center'
+        }}
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      />
+    </div>
+  );
+}
+
+function NavIconItem({ 
+  href, 
+  icon, 
+  label, 
+  index 
+}: { 
+  href: string; 
+  icon: React.ReactNode; 
+  label: string; 
+  index: number; 
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div 
+      style={{ position: 'relative', padding: '0 1rem' }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <motion.a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ 
+          color: '#8d8dfc', 
+          transition: 'color 0.2s', 
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '0.3rem',
+          paddingBottom: '0.5rem'
+        }}
+        animate={{ color: isHovered ? '#EDEDED' : '#9797fc' }}
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: (5 + index) * 0.1 }}
+        aria-label={label}
+      >
+        {icon}
+        <span style={{ fontSize: '0.7rem', fontWeight: 500 }}>{label}</span>
       </motion.a>
       <motion.div
         style={{
@@ -80,53 +139,47 @@ export function Navbar() {
       transition={{ duration: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '5rem' }}>
           {/* Logo */}
           <motion.a 
             href="#" 
-            style={{ fontSize: '1.25rem', fontWeight: 600, color: '#EDEDED', transition: 'color 0.2s' }}
+            style={{ fontSize: '1.25rem', fontWeight: 600, color: '#EDEDED', transition: 'color 0.2s', display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}
             whileHover={{ scale: 1.05, color: '#4F7DFF' }}
             whileTap={{ scale: 0.95 }}
           >
+            <img src="/favicon.png" alt="Logo" style={{ width: '28px', height: '28px' }} />
             LYB
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div style={{ display: 'none' }} className="desktop-nav">
+          <div style={{ display: 'none', flex: 1, justifyContent: 'center' }} className="desktop-nav">
             {navigation.map((item, index) => (
               <NavItem key={item.name} item={item} index={index} />
             ))}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '1rem', marginLeft: '1rem', paddingLeft: '1rem', borderLeft: '1px solid #2A2A35' }}>
-              <motion.a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
-                whileHover={{ scale: 1.1, color: '#EDEDED', rotate: 5 }}
-                aria-label="Resume"
-              >
-                <FileText size={20} />
-              </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/in/limyubing"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
-                whileHover={{ scale: 1.1, color: '#EDEDED', rotate: 5 }}
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </motion.a>
-              <motion.a
-                href="https://github.com/limyubing"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
-                whileHover={{ scale: 1.1, color: '#EDEDED', rotate: 5 }}
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </motion.a>
+          </div>
+          
+          {/* Desktop Icons */}
+          <div style={{ display: 'none' }} className="desktop-icons">
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' ,paddingLeft: '2rem', borderLeft: '1px solid rgba(113, 113, 122, 0.3)', marginTop: '0.5rem'}}>
+              
+              <NavIconItem 
+                href="/resume.pdf" 
+                icon={<FileText size={18} />} 
+                label="Resume" 
+                index={0}
+              />
+              <NavIconItem 
+                href="https://www.linkedin.com/in/limyubing" 
+                icon={<Linkedin size={18} />} 
+                label="LinkedIn" 
+                index={1}
+              />
+              <NavIconItem 
+                href="https://github.com/peppastanky" 
+                icon={<Github size={18} />} 
+                label="GitHub" 
+                index={2}
+              />
             </div>
           </div>
 
@@ -182,40 +235,43 @@ export function Navbar() {
                 </motion.a>
               ))}
               <motion.div 
-                style={{ display: 'flex', alignItems: 'center', gap: '1rem', paddingTop: '0.75rem', borderTop: '1px solid #2A2A35', marginTop: '0.75rem' }}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem', paddingTop: '1rem', borderTop: '1px solid rgba(113, 113, 122, 0.3)', marginTop: '1rem' }}
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: navigation.length * 0.05 }}
               >
                 <motion.a
-                  href="#"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
-                  whileHover={{ scale: 1.1, color: '#EDEDED' }}
+                  style={{ color: '#A1A1AA', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.4rem' }}
+                  whileHover={{ color: '#EDEDED', y: -2 }}
                   aria-label="Resume"
                 >
                   <FileText size={20} />
+                  <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>Resume</span>
                 </motion.a>
                 <motion.a
                   href="https://www.linkedin.com/in/limyubing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
-                  whileHover={{ scale: 1.1, color: '#EDEDED' }}
+                  style={{ color: '#A1A1AA', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.4rem' }}
+                  whileHover={{ color: '#EDEDED', y: -2 }}
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
+                  <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>LinkedIn</span>
                 </motion.a>
                 <motion.a
                   href="https://github.com/limyubing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#A1A1AA', transition: 'color 0.2s' }}
-                  whileHover={{ scale: 1.1, color: '#EDEDED' }}
+                  style={{ color: '#A1A1AA', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.4rem' }}
+                  whileHover={{ color: '#EDEDED', y: -2 }}
                   aria-label="GitHub"
                 >
                   <Github size={20} />
+                  <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>GitHub</span>
                 </motion.a>
               </motion.div>
             </div>
@@ -225,11 +281,13 @@ export function Navbar() {
       
       <style>{`
         @media (min-width: 768px) {
-          .desktop-nav { display: flex !important; align-items: center; }
+          .desktop-nav { display: flex !important; }
+          .desktop-icons { display: block !important; }
           .mobile-menu-btn { display: none !important; }
         }
         @media (max-width: 767px) {
           .desktop-nav { display: none !important; }
+          .desktop-icons { display: none !important; }
         }
       `}</style>
     </motion.nav>

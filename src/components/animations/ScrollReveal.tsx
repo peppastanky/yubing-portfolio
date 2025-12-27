@@ -15,7 +15,7 @@ export function ScrollReveal({
   className = ''
 }: ScrollRevealProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px", amount: 0.3 });
+  const isInView = useInView(ref, { once: true, margin: "-100px", amount: 0.3 });
 
   const directions = {
     up: { y: 60, x: 0 },
