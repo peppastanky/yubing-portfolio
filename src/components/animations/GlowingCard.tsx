@@ -48,7 +48,7 @@ export function GlowingCard({ children, className = '' }: GlowingCardProps) {
           position: 'absolute',
           inset: -2,
           borderRadius: 'inherit',
-          background: `radial-gradient(600px circle at ${mouseX.get() * 100}% ${mouseY.get() * 100}%, rgba(79, 125, 255, 0.15), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${mouseX.get() * 100}% ${mouseY.get() * 100}%, rgba(157, 125, 255, 0.15), transparent 40%)`,
           opacity: 0,
           pointerEvents: 'none',
           zIndex: -1,

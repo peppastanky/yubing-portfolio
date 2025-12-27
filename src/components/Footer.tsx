@@ -7,10 +7,20 @@ export function Footer() {
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', gap: '1.5rem' }} className="footer-content">
           <div style={{ textAlign: 'center' }} className="footer-text">
             <p style={{ color: '#F5F5F7', marginBottom: '0.5rem' }}>Lim Yu Bing</p>
+            <div style={{ marginBottom: '0.25rem' }}>
+              <a
+                href="mailto:yubing.lim.2024@computing.smu.edu.sg"
+                style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#6366F1'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#9CA3AF'}
+              >
+                yubing.lim.2024@computing.smu.edu.sg
+              </a>
+            </div>
             <div>
               <a
                 href="mailto:yyubingg@gmail.com"
-                style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
+                style={{ color: '#9CA3AF', transition: 'color 0.2s', fontSize: '0.875rem' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#6366F1'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#9CA3AF'}
               >
@@ -19,7 +29,7 @@ export function Footer() {
               <span style={{ color: '#9CA3AF', margin: '0 0.5rem' }}>•</span>
               <a
                 href="tel:+6593700757"
-                style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
+                style={{ color: '#9CA3AF', transition: 'color 0.2s', fontSize: '0.875rem' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#6366F1'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#9CA3AF'}
               >
@@ -30,7 +40,7 @@ export function Footer() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
             <a
-              href="mailto:yyubingg@gmail.com"
+              href="mailto:yubing.lim.2024@computing.smu.edu.sg"
               style={{ color: '#9CA3AF', transition: 'color 0.2s' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#F5F5F7'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#9CA3AF'}

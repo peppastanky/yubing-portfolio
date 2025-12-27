@@ -14,7 +14,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Construct mailto link with form data
-    const mailtoLink = `mailto:yyubingg@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:yubing.lim.2024@computing.smu.edu.sg?subject=${encodeURIComponent(
       formData.subject
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
@@ -120,12 +120,22 @@ export default function ContactPage() {
             <h3 className="mb-4">Contact Information</h3>
             <div className="space-y-4">
               <a
+                href="mailto:yubing.lim.2024@computing.smu.edu.sg"
+                className="flex items-start gap-3 text-[--color-text-secondary] hover:text-[--color-accent] transition-colors"
+              >
+                <Mail className="w-5 h-5 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-[--color-text-secondary] mb-1">Primary Email</p>
+                  <p className="text-[--color-text-primary]">yubing.lim.2024@computing.smu.edu.sg</p>
+                </div>
+              </a>
+              <a
                 href="mailto:yyubingg@gmail.com"
                 className="flex items-start gap-3 text-[--color-text-secondary] hover:text-[--color-accent] transition-colors"
               >
                 <Mail className="w-5 h-5 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-[--color-text-secondary] mb-1">Email</p>
+                  <p className="text-sm text-[--color-text-secondary] mb-1">Secondary Email</p>
                   <p className="text-[--color-text-primary]">yyubingg@gmail.com</p>
                 </div>
               </a>
@@ -156,7 +166,7 @@ export default function ContactPage() {
                 <span>LinkedIn</span>
               </a>
               <a
-                href="https://github.com/limyubing"
+                href="https://github.com/peppastanky"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-[--color-text-secondary] hover:text-[--color-accent] transition-colors"

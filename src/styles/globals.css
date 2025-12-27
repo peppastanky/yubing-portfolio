@@ -10,7 +10,7 @@
   --color-text-primary: #EDEDED;       /* Soft white text */
   --color-text-secondary: #A1A1AA;     /* Muted gray text */
   --color-text-muted: #71717A;         /* De-emphasized text */
-  --color-accent: #4F7DFF;             /* Cool blue accent */
+  --color-accent: #9D7DFF;             /* Cool blue accent */
   --color-accent-hover: #3D6AE6;       /* Darker blue on hover */
   --color-accent-muted: #2D4A99;       /* Muted accent for backgrounds */
 
@@ -114,12 +114,12 @@ html {
 
 /* Selection styles */
 ::selection {
-  background-color: rgba(79, 125, 255, 0.25);
+  background-color: rgba(157, 125, 255, 0.25);
   color: #EDEDED;
 }
 
 ::-moz-selection {
-  background-color: rgba(79, 125, 255, 0.25);
+  background-color: rgba(157, 125, 255, 0.25);
   color: #EDEDED;
 }
 
@@ -138,7 +138,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4F7DFF;
+  background: #9D7DFF;
 }
 
 @media (max-width: 768px) {

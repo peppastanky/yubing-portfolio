@@ -49,7 +49,7 @@ export function SingleRipple({ containerRef }: SingleRippleProps) {
             left: ripple.x,
             width: '20px',
             height: '20px',
-            border: '2px solid #4F7DFF',
+            border: '2px solid #9D7DFF',
             borderRadius: '50%',
             pointerEvents: 'none',
             transform: 'translate(-50%, -50%)',

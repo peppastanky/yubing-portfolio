@@ -19,7 +19,7 @@ export function SkillChip({ skill }: SkillChipProps) {
       }}
       whileHover={{ 
         scale: 1.05,
-        borderColor: '#4F7DFF',
+        borderColor: '#9D7DFF',
         transition: { duration: 0.2 }
       }}
       whileTap={{ scale: 0.95 }}

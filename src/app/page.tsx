@@ -35,7 +35,7 @@ export default function HomePage() {
             left: '10%',
             width: '900px',
             height: '900px',
-            background: 'radial-gradient(circle, rgba(79, 125, 255, 0.4) 0%, rgba(79, 125, 255, 0.2) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(157, 125, 255, 0.4) 0%, rgba(157, 125, 255, 0.2) 40%, transparent 70%)',
             filter: 'blur(100px)',
             borderRadius: '50%',
             zIndex: 0
@@ -58,7 +58,7 @@ export default function HomePage() {
             left: '80%',
             width: '700px',
             height: '700px',
-            background: 'radial-gradient(circle, rgba(79, 125, 255, 0.35) 0%, rgba(79, 125, 255, 0.15) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(157, 125, 255, 0.35) 0%, rgba(157, 125, 255, 0.15) 40%, transparent 70%)',
             filter: 'blur(90px)',
             borderRadius: '50%',
             zIndex: 0
@@ -141,7 +141,7 @@ export default function HomePage() {
                 style={{ 
                   padding: '1rem 2.5rem',
                   fontSize: '0.95rem',
-                  backgroundColor: 'rgba(79, 125, 255, 0.25)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.25)', 
                   color: '#EDEDED', 
                   borderRadius: '0.5rem', 
                   transition: 'all 0.2s ease',
@@ -150,18 +150,18 @@ export default function HomePage() {
                   letterSpacing: '0.05em',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(79, 125, 255, 0.4)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
+                  border: '1px solid rgba(157, 125, 255, 0.4)',
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.35)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.6)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.35)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.6)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.25)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.4)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.25)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)';
                 }}
               >
                 VIEW WORK
@@ -175,7 +175,7 @@ export default function HomePage() {
                   fontSize: '0.95rem',
                   backgroundColor: 'rgba(255, 255, 255, 0.03)', 
                   color: '#EDEDED',
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '0.5rem', 
                   transition: 'all 0.2s ease',
                   display: 'inline-block',
@@ -186,13 +186,13 @@ export default function HomePage() {
                   boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.15)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.15)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
                   e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
               >
@@ -215,30 +215,30 @@ export default function HomePage() {
           >
             <MagneticButton strength={0.2}>
               <a
-                href="mailto:yyubingg@gmail.com"
+                href="mailto:yubing.lim.2024@computing.smu.edu.sg"
                 style={{ 
                   padding: '1rem', 
-                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.1)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '50%', 
                   transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF',
+                  color: '#9D7DFF',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
-                  e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#9D7DFF';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="Email"
               >
@@ -252,27 +252,27 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 style={{ 
                   padding: '1rem', 
-                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.1)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '50%', 
                   transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF',
+                  color: '#9D7DFF',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
-                  e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#9D7DFF';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="LinkedIn"
               >
@@ -286,27 +286,27 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 style={{ 
                   padding: '1rem', 
-                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.1)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '50%', 
                   transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF',
+                  color: '#9D7DFF',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
-                  e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#9D7DFF';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="GitHub"
               >
@@ -338,7 +338,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
-            whileHover={{ color: '#4F7DFF' }}
+            whileHover={{ color: '#9D7DFF' }}
           >
             <span>Scroll</span>
             <motion.div
@@ -348,6 +348,71 @@ export default function HomePage() {
               <ArrowRight size={10} style={{ transform: 'rotate(90deg)' }} />
             </motion.div>
           </motion.a> */}
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section id="about" className="about-section">
+        <div className="about-container">
+          {/* Header Row: Title + Hook */}
+          <ScrollReveal direction="up">
+            <div className="about-header">
+              <h2>About Me</h2>
+              <p className="about-hook">
+                I enjoy building things that work — and making them better through iteration.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Content Row: Photo + Defaults Card */}
+          <div className="about-content">
+            {/* Left Column: Profile Photo */}
+            <div className="about-photo-column">
+              <div className="about-photo-wrapper">
+                <div className="about-photo-glow" />
+                <img 
+                  src="/profile.jpg" 
+                  alt="Yu Bing Lim" 
+                  className="about-photo"
+                />
+              </div>
+              <div /* style={{marginLeft: '1.3rem'}} */>
+                <p className="about-caption">SMU IS • Web Dev • Design</p>
+              </div>
+            </div>
+
+            {/* Right Column: Defaults Card + Proof */}
+            <ScrollReveal delay={0.1} direction="left">
+              <div className="about-text-column">
+                <div className="defaults-card">
+                  <h3 className="defaults-title">My defaults</h3>
+                  <div className="defaults-list">
+                    <div className="defaults-item">
+                      <span className="defaults-label">Default mode:</span>
+                      <span className="defaults-value">build first, refine later</span>
+                    </div>
+                    <div className="defaults-item">
+                      <span className="defaults-label">I care about:</span>
+                      <span className="defaults-value">clean UX and thoughtful details</span>
+                    </div>
+                    <div className="defaults-item">
+                      <span className="defaults-label">I enjoy:</span>
+                      <span className="defaults-value">problem-solving and making things work</span>
+                    </div>
+                    <div className="defaults-item">
+                      <span className="defaults-label">Currently learning:</span>
+                      <span className="defaults-value">React, TypeScript, and modern frontend patterns</span>
+                    </div>
+                    <div className="defaults-item defaults-item-last">
+                      <span className="defaults-label">Strength:</span>
+                      <span className="defaults-value">explaining ideas clearly and collaborating with others</span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -365,7 +430,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#4F7DFF', 
+                      color: '#9D7DFF', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -397,7 +462,7 @@ export default function HomePage() {
       </ParallaxSection>
 
       {/* Skills Snapshot */}
-      <section id="skills" style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 1.5rem' }} className="skills-section">
+      <section id="skills" className="skills-section">
         <ScrollReveal direction="up">
           <h2 style={{ marginBottom: '3rem' }}>Skills Snapshot</h2>
         </ScrollReveal>
@@ -433,7 +498,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#4F7DFF', 
+                      color: '#9D7DFF', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -465,8 +530,8 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <ParallaxSection offset={50}>
-        <section id="contact" style={{ backgroundColor: '#15151A', padding: '4rem 0' }} className="cta-section">
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center' }}>
+        <section id="contact" style={{  padding: '4rem 0' }} className="cta-section">
+          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center'}}>
             <ScrollReveal direction="up">
               <h2 style={{ marginBottom: '1.5rem' }}>Interested in building something together?</h2>
             </ScrollReveal>
@@ -478,19 +543,19 @@ export default function HomePage() {
             <ScrollReveal delay={0.3} direction="up">
               <MagneticButton>
                 <a
-                  href="mailto:yyubingg@gmail.com"
+                  href="mailto:yubing.lim.2024@computing.smu.edu.sg"
                   style={{ 
                     display: 'inline-flex', 
                     alignItems: 'center', 
                     gap: '0.5rem', 
                     padding: '1rem 2rem', 
-                    backgroundColor: '#4F7DFF', 
+                    backgroundColor: '#9D7DFF', 
                     color: '#EDEDED', 
                     borderRadius: '0.5rem', 
                     transition: 'background-color 0.2s' 
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3D6AE6'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4F7DFF'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9D7DFF'}
                 >
                   <span>Get in touch</span>
                   <ArrowRight size={20} />
@@ -502,11 +567,176 @@ export default function HomePage() {
       </ParallaxSection>
       
       <style>{`
+        /* About Section */
+        .about-section {
+          background-color: #0B0B0F;
+          padding: 6rem 0;
+          border-top: 1px solid #2A2A35;
+        }
+
+        .about-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
+        }
+
+        .about-header {
+          margin-bottom: 3rem;
+        }
+
+        .about-header h2 {
+          margin-bottom: 1rem;
+        }
+
+        .about-hook {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          color: #A1A1AA;
+          font-weight: 400;
+          font-style: italic;
+         
+        }
+
+        .about-content {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .about-photo-column {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .about-photo-wrapper {
+          position: relative;
+          width: fit-content;
+        }
+
+        .about-photo-glow {
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(157, 125, 255, 0.12) 0%, transparent 70%);
+          filter: blur(20px);
+          z-index: 0;
+        }
+
+        .about-photo {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid rgba(157, 125, 255, 0.2);
+          position: relative;
+          z-index: 1;
+        }
+
+        .about-caption {
+          font-size: 0.875rem;
+          color: #A1A1AA;
+          text-align: center;
+          width: 200px;
+        }
+
+        .about-text-column {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .defaults-card {
+          background: linear-gradient(135deg, rgba(157, 125, 255, 0.03) 0%, rgba(157, 125, 255, 0.01) 100%);
+          border: 1px solid rgba(157, 125, 255, 0.15);
+          border-radius: 12px;
+          padding: 2rem;
+          backdrop-filter: blur(8px);
+        }
+
+        .defaults-title {
+          font-size: 1.125rem;
+          color: #EDEDED;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          letter-spacing: -0.01em;
+        }
+
+        .defaults-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .defaults-item {
+          display: flex;
+          gap: 1rem;
+          padding: 0.75rem 0;
+          border-bottom: 1px solid rgba(157, 125, 255, 0.08);
+        }
+
+        .defaults-item-last {
+          border-bottom: none;
+        }
+
+        .defaults-label {
+          color: #9D7DFF;
+          font-weight: 600;
+          min-width: 140px;
+          font-size: 0.9375rem;
+          flex-shrink: 0;
+        }
+
+        .defaults-value {
+          color: #EDEDED;
+          font-size: 0.9375rem;
+          line-height: 1.5;
+        }
+
+        .about-proof {
+          font-size: 0.9375rem;
+          line-height: 1.6;
+          color: #A1A1AA;
+          font-style: italic;
+        }
+
+        .skills-section {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 4rem 1.5rem;
+        }
+
         @media (min-width: 768px) {
           .hero-section { padding: 8rem 2rem !important; }
           .hero-subtitle { font-size: 1.5rem !important; }
-          .projects-section, .experience-section, .skills-section, .cta-section { padding: 6rem 0 !important; }
+          .projects-section, .experience-section, .cta-section { padding: 6rem 0 !important; }
           .projects-grid, .experience-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          
+          /* About Section Desktop Layout */
+          .about-content {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 3rem;
+            align-items: center;
+          }
+
+          .about-photo-column {
+            align-items: flex-start;
+            justify-self: center;
+          }
+
+          .about-photo {
+            width: 240px;
+            height: 240px;
+          }
+
+          .about-caption {
+            width: 240px;
+          }
         }
       `}</style>
     </div>
