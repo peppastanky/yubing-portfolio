@@ -67,7 +67,7 @@ function NavIconItem({
 
   return (
     <div 
-      style={{ position: 'relative', padding: '0 1rem' }}
+      style={{ position: 'relative', padding: '0 0.75rem' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -152,15 +152,15 @@ export function Navbar() {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div style={{ display: 'none', flex: 1, justifyContent: 'center' }} className="desktop-nav">
+          <div style={{ display: 'none', flex: 1, justifyContent: 'center', marginTop: '0.5rem' }} className="desktop-nav">
             {navigation.map((item, index) => (
               <NavItem key={item.name} item={item} index={index} />
             ))}
           </div>
           
           {/* Desktop Icons */}
-          <div style={{ display: 'none' }} className="desktop-icons">
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' ,paddingLeft: '2rem', borderLeft: '1px solid rgba(113, 113, 122, 0.3)', marginTop: '0.5rem'}}>
+          <div style={{ display: 'none', flexShrink: 0 }} className="desktop-icons">
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', paddingLeft: '1.5rem', borderLeft: '1px solid rgba(113, 113, 122, 0.3)', marginTop: '0.5rem' }}>
               
               <NavIconItem 
                 href="/resume.pdf" 

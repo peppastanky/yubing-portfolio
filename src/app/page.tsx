@@ -462,7 +462,7 @@ export default function HomePage() {
       </ParallaxSection>
 
       {/* Skills Snapshot */}
-      <section id="skills" style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 1.5rem' }} className="skills-section">
+      <section id="skills" className="skills-section">
         <ScrollReveal direction="up">
           <h2 style={{ marginBottom: '3rem' }}>Skills Snapshot</h2>
         </ScrollReveal>
@@ -530,8 +530,8 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <ParallaxSection offset={50}>
-        <section id="contact" style={{ backgroundColor: '#15151A', padding: '4rem 0' }} className="cta-section">
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center' }}>
+        <section id="contact" style={{  padding: '4rem 0' }} className="cta-section">
+          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center'}}>
             <ScrollReveal direction="up">
               <h2 style={{ marginBottom: '1.5rem' }}>Interested in building something together?</h2>
             </ScrollReveal>
@@ -593,7 +593,8 @@ export default function HomePage() {
           line-height: 1.6;
           color: #A1A1AA;
           font-weight: 400;
-          max-width: 42rem;
+          font-style: italic;
+         
         }
 
         .about-content {
@@ -703,10 +704,16 @@ export default function HomePage() {
           font-style: italic;
         }
 
+        .skills-section {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 4rem 1.5rem;
+        }
+
         @media (min-width: 768px) {
           .hero-section { padding: 8rem 2rem !important; }
           .hero-subtitle { font-size: 1.5rem !important; }
-          .projects-section, .experience-section, .skills-section, .cta-section { padding: 6rem 0 !important; }
+          .projects-section, .experience-section, .cta-section { padding: 6rem 0 !important; }
           .projects-grid, .experience-grid { grid-template-columns: repeat(2, 1fr) !important; }
           
           /* About Section Desktop Layout */
