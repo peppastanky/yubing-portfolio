@@ -144,7 +144,7 @@ export function Navbar() {
           <motion.a 
             href="#" 
             style={{ fontSize: '1.25rem', fontWeight: 600, color: '#EDEDED', transition: 'color 0.2s', display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}
-            whileHover={{ scale: 1.05, color: '#4F7DFF' }}
+            whileHover={{ scale: 1.05, color: '#9D7DFF' }}
             whileTap={{ scale: 0.95 }}
           >
             <img src="/favicon.png" alt="Logo" style={{ width: '28px', height: '28px' }} />

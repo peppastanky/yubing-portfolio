@@ -35,7 +35,7 @@ export default function HomePage() {
             left: '10%',
             width: '900px',
             height: '900px',
-            background: 'radial-gradient(circle, rgba(79, 125, 255, 0.4) 0%, rgba(79, 125, 255, 0.2) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(157, 125, 255, 0.4) 0%, rgba(157, 125, 255, 0.2) 40%, transparent 70%)',
             filter: 'blur(100px)',
             borderRadius: '50%',
             zIndex: 0
@@ -58,7 +58,7 @@ export default function HomePage() {
             left: '80%',
             width: '700px',
             height: '700px',
-            background: 'radial-gradient(circle, rgba(79, 125, 255, 0.35) 0%, rgba(79, 125, 255, 0.15) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(157, 125, 255, 0.35) 0%, rgba(157, 125, 255, 0.15) 40%, transparent 70%)',
             filter: 'blur(90px)',
             borderRadius: '50%',
             zIndex: 0
@@ -141,7 +141,7 @@ export default function HomePage() {
                 style={{ 
                   padding: '1rem 2.5rem',
                   fontSize: '0.95rem',
-                  backgroundColor: 'rgba(79, 125, 255, 0.25)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.25)', 
                   color: '#EDEDED', 
                   borderRadius: '0.5rem', 
                   transition: 'all 0.2s ease',
@@ -150,18 +150,18 @@ export default function HomePage() {
                   letterSpacing: '0.05em',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(79, 125, 255, 0.4)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
+                  border: '1px solid rgba(157, 125, 255, 0.4)',
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.35)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.6)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.35)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.6)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.25)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.4)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.25)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)';
                 }}
               >
                 VIEW WORK
@@ -175,7 +175,7 @@ export default function HomePage() {
                   fontSize: '0.95rem',
                   backgroundColor: 'rgba(255, 255, 255, 0.03)', 
                   color: '#EDEDED',
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '0.5rem', 
                   transition: 'all 0.2s ease',
                   display: 'inline-block',
@@ -186,13 +186,13 @@ export default function HomePage() {
                   boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.15)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.15)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
                   e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
               >
@@ -218,27 +218,27 @@ export default function HomePage() {
                 href="mailto:yubing.lim.2024@computing.smu.edu.sg"
                 style={{ 
                   padding: '1rem', 
-                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.1)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '50%', 
                   transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF',
+                  color: '#9D7DFF',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
-                  e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#9D7DFF';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="Email"
               >
@@ -252,27 +252,27 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 style={{ 
                   padding: '1rem', 
-                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.1)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '50%', 
                   transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF',
+                  color: '#9D7DFF',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
-                  e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#9D7DFF';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="LinkedIn"
               >
@@ -286,27 +286,27 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 style={{ 
                   padding: '1rem', 
-                  backgroundColor: 'rgba(79, 125, 255, 0.1)', 
-                  border: '1px solid rgba(79, 125, 255, 0.3)', 
+                  backgroundColor: 'rgba(157, 125, 255, 0.1)', 
+                  border: '1px solid rgba(157, 125, 255, 0.3)', 
                   borderRadius: '50%', 
                   transition: 'all 0.2s ease',
                   display: 'inline-flex',
-                  color: '#4F7DFF',
+                  color: '#9D7DFF',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.2)';
                   e.currentTarget.style.color = '#EDEDED';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(157, 125, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(79, 125, 255, 0.1)';
-                  e.currentTarget.style.color = '#4F7DFF';
-                  e.currentTarget.style.borderColor = 'rgba(79, 125, 255, 0.3)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(79, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.backgroundColor = 'rgba(157, 125, 255, 0.1)';
+                  e.currentTarget.style.color = '#9D7DFF';
+                  e.currentTarget.style.borderColor = 'rgba(157, 125, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(157, 125, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
                 }}
                 aria-label="GitHub"
               >
@@ -338,7 +338,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
-            whileHover={{ color: '#4F7DFF' }}
+            whileHover={{ color: '#9D7DFF' }}
           >
             <span>Scroll</span>
             <motion.div
@@ -430,7 +430,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#4F7DFF', 
+                      color: '#9D7DFF', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -498,7 +498,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#4F7DFF', 
+                      color: '#9D7DFF', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -549,13 +549,13 @@ export default function HomePage() {
                     alignItems: 'center', 
                     gap: '0.5rem', 
                     padding: '1rem 2rem', 
-                    backgroundColor: '#4F7DFF', 
+                    backgroundColor: '#9D7DFF', 
                     color: '#EDEDED', 
                     borderRadius: '0.5rem', 
                     transition: 'background-color 0.2s' 
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3D6AE6'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4F7DFF'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9D7DFF'}
                 >
                   <span>Get in touch</span>
                   <ArrowRight size={20} />
@@ -622,7 +622,7 @@ export default function HomePage() {
           right: -10px;
           bottom: -10px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(79, 125, 255, 0.12) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(157, 125, 255, 0.12) 0%, transparent 70%);
           filter: blur(20px);
           z-index: 0;
         }
@@ -632,7 +632,7 @@ export default function HomePage() {
           height: 200px;
           border-radius: 50%;
           object-fit: cover;
-          border: 2px solid rgba(79, 125, 255, 0.2);
+          border: 2px solid rgba(157, 125, 255, 0.2);
           position: relative;
           z-index: 1;
         }
@@ -651,8 +651,8 @@ export default function HomePage() {
         }
 
         .defaults-card {
-          background: linear-gradient(135deg, rgba(79, 125, 255, 0.03) 0%, rgba(79, 125, 255, 0.01) 100%);
-          border: 1px solid rgba(79, 125, 255, 0.15);
+          background: linear-gradient(135deg, rgba(157, 125, 255, 0.03) 0%, rgba(157, 125, 255, 0.01) 100%);
+          border: 1px solid rgba(157, 125, 255, 0.15);
           border-radius: 12px;
           padding: 2rem;
           backdrop-filter: blur(8px);
@@ -676,7 +676,7 @@ export default function HomePage() {
           display: flex;
           gap: 1rem;
           padding: 0.75rem 0;
-          border-bottom: 1px solid rgba(79, 125, 255, 0.08);
+          border-bottom: 1px solid rgba(157, 125, 255, 0.08);
         }
 
         .defaults-item-last {
@@ -684,7 +684,7 @@ export default function HomePage() {
         }
 
         .defaults-label {
-          color: #4F7DFF;
+          color: #9D7DFF;
           font-weight: 600;
           min-width: 140px;
           font-size: 0.9375rem;

@@ -95,7 +95,7 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
             style={{ 
               display: 'inline-block',
               // Gradient text effect
-              background: 'linear-gradient(135deg, #EDEDED 0%, #4F7DFF 100%)',
+              background: 'linear-gradient(135deg, #EDEDED 0%, #9D7DFF 100%)',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -122,7 +122,7 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
           transform: 'translateX(-50%)',
           width: 'clamp(80px, 20%, 100px)',
           height: '2px',
-          background: 'linear-gradient(90deg, transparent, #4F7DFF, transparent)',
+          background: 'linear-gradient(90deg, transparent, #9D7DFF, transparent)',
           pointerEvents: 'none',
           zIndex: 20
         }}
@@ -149,7 +149,7 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
             width: '6px',
             height: '6px',
             borderRadius: '50%',
-            backgroundColor: '#4F7DFF',
+            backgroundColor: '#9D7DFF',
             pointerEvents: 'none',
             zIndex: 20
           }}
@@ -174,7 +174,7 @@ export function HeroName({ text, className = '' }: HeroNameProps) {
               width: '100%',
               height: '100%',
               borderRadius: '50%',
-              backgroundColor: '#4F7DFF',
+              backgroundColor: '#9D7DFF',
               opacity: 0.4
             }}
             animate={{
@@ -236,8 +236,8 @@ function ProfileFollower({ mouseX, mouseY, isHovering }: ProfileFollowerProps) {
         height: '120px',
         borderRadius: '50%',
         overflow: 'hidden',
-        border: '3px solid #4F7DFF',
-        boxShadow: '0 0 30px rgba(79, 125, 255, 0.6)',
+        border: '3px solid #9D7DFF',
+        boxShadow: '0 0 30px rgba(157, 125, 255, 0.6)',
         zIndex: 10,
         pointerEvents: 'none',
         // Use will-change to optimize for smooth animations
