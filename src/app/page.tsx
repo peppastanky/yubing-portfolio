@@ -134,6 +134,10 @@ export default function HomePage() {
                   skewX: -1,
                   letterSpacing: '0.02em'
                 }}
+                whileTap={{
+                  scale: 0.98,
+                  skewX: 0
+                }}
               >
                 <span
                   style={{ 
@@ -142,13 +146,94 @@ export default function HomePage() {
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                     display: 'inline-block',
-                    filter: isHovering ? 'blur(1px)' : 'blur(0px)',
-                    transition: 'filter 0.3s'
+                    transition: 'text-shadow 0.3s ease, filter 0.3s ease',
+                    textShadow: isHovering
+                      ? `
+                        0 0 30px rgba(138, 43, 226, 0.5),
+                        0 0 60px rgba(138, 43, 226, 0.3)
+                      `
+                      : 'none',
+                    filter: isHovering ? 'brightness(1.1)' : 'brightness(1)'
                   }}
                 >
                   YU BING
                 </span>
               </motion.h1>
+              
+              {/* Premium subtle hover indicator */}
+              <motion.div
+                style={{
+                  position: 'absolute',
+                  top: '80%',
+                  left: '30%',
+                  transform: 'translateX(-50%)',
+                  width: '200px',
+                  height: '2px',
+                  background: 'linear-gradient(90deg, transparent, #4F7DFF, transparent)',
+                  pointerEvents: 'none',
+                  zIndex: 20
+                }}
+                initial={{ opacity: 0, scaleX: 0 }}
+                animate={{ 
+                  opacity: isHovering ? 0 : [0, 0.6, 0.6, 0],
+                  scaleX: isHovering ? 0 : [0, 1, 1, 0]
+                }}
+                transition={{ 
+                  duration: 3,
+                  delay: 2,
+                  times: [0, 0.2, 0.8, 1],
+                  ease: "easeInOut"
+                }}
+              />
+              
+              {/* Pulsing dot indicator */}
+              <motion.div
+                style={{
+                  position: 'absolute',
+                  top: '0',
+                  right: '-20px',
+                  width: '6px',
+                  height: '6px',
+                  borderRadius: '50%',
+                  backgroundColor: '#4F7DFF',
+                  pointerEvents: 'none',
+                  zIndex: 20
+                }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ 
+                  opacity: isHovering ? 0 : [0, 0.8, 0.8, 0],
+                  scale: isHovering ? 0 : [0, 1, 1, 0]
+                }}
+                transition={{ 
+                  duration: 3,
+                  delay: 2,
+                  times: [0, 0.2, 0.8, 1],
+                  ease: "easeInOut"
+                }}
+              >
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '50%',
+                    backgroundColor: '#4F7DFF',
+                    opacity: 0.4
+                  }}
+                  animate={{
+                    scale: [1, 2, 1],
+                    opacity: [0.4, 0, 0.4]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+              </motion.div>
               
               {/* Profile Image Circle that follows mouse */}
               <motion.div
@@ -156,8 +241,8 @@ export default function HomePage() {
                   position: 'absolute',
                   top: mousePosition.y,
                   left: mousePosition.x,
-                  width: '120px',
-                  height: '120px',
+                  width: 'clamp(80px, 15vw, 120px)',
+                  height: 'clamp(80px, 15vw, 120px)',
                   borderRadius: '50%',
                   overflow: 'hidden',
                   border: '3px solid #4F7DFF',
