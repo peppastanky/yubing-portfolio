@@ -352,74 +352,64 @@ export default function HomePage() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" style={{ 
-        backgroundColor: '#0B0B0F',
-        padding: '6rem 0',
-        borderTop: '1px solid #2A2A35'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
+      <section id="about" className="about-section">
+        <div className="about-container">
+          {/* Header Row: Title + Hook */}
           <ScrollReveal direction="up">
-            <h2 style={{ marginBottom: '3rem' }}>About Me</h2>
+            <div className="about-header">
+              <h2>About Me</h2>
+              <p className="about-hook">
+                I enjoy building things that work — and making them better through iteration.
+              </p>
+            </div>
           </ScrollReveal>
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: '1fr',
-            gap: '3rem',
-            alignItems: 'center'
-          }} className="about-grid">
-            <ScrollReveal delay={0.2} direction="right">
-              <div style={{ 
-                display: 'flex',
-                justifyContent: 'center'
-              }} className="about-image">
+
+          {/* Content Row: Photo + Defaults Card */}
+          <div className="about-content">
+            {/* Left Column: Profile Photo */}
+            <div className="about-photo-column">
+              <div className="about-photo-wrapper">
+                <div className="about-photo-glow" />
                 <img 
                   src="/profile.jpg" 
-                  alt="Profile" 
-                  style={{ 
-                    width: '250px',
-                    height: '250px',
-                    borderRadius: '50%',
-                    objectFit: 'cover',
-                    border: '3px solid rgba(79, 125, 255, 0.3)',
-                    boxShadow: '0 10px 40px rgba(79, 125, 255, 0.2)'
-                  }}
+                  alt="Yu Bing Lim" 
+                  className="about-photo"
                 />
               </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2} direction="left">
-              <div style={{ 
-                padding: '2rem',
-                backgroundColor: 'rgba(79, 125, 255, 0.05)',
-                border: '1px solid rgba(79, 125, 255, 0.1)',
-                borderRadius: '1rem',
-                backdropFilter: 'blur(10px)'
-              }}>
-                <p style={{ 
-                  fontSize: '1.125rem', 
-                  lineHeight: '1.8',
-                  color: '#E5E7EB',
-                  marginBottom: '1.5rem'
-                }}>
-                  I'm a passionate software developer with a love for creating elegant solutions to complex problems. 
-                  My journey in tech has been driven by curiosity and a constant desire to learn and grow.
-                </p>
-                <p style={{ 
-                  fontSize: '1.125rem', 
-                  lineHeight: '1.8',
-                  color: '#E5E7EB',
-                  marginBottom: '1.5rem'
-                }}>
-                  With expertise in full-stack development, I enjoy working on projects that challenge me to think 
-                  creatively and push the boundaries of what's possible with modern web technologies.
-                </p>
-                <p style={{ 
-                  fontSize: '1.125rem', 
-                  lineHeight: '1.8',
-                  color: '#E5E7EB'
-                }}>
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-                  or sharing knowledge with the developer community.
-                </p>
+              <div /* style={{marginLeft: '1.3rem'}} */>
+                <p className="about-caption">SMU IS • Web Dev • Design</p>
+              </div>
+            </div>
+
+            {/* Right Column: Defaults Card + Proof */}
+            <ScrollReveal delay={0.1} direction="left">
+              <div className="about-text-column">
+                <div className="defaults-card">
+                  <h3 className="defaults-title">My defaults</h3>
+                  <div className="defaults-list">
+                    <div className="defaults-item">
+                      <span className="defaults-label">Default mode:</span>
+                      <span className="defaults-value">build first, refine later</span>
+                    </div>
+                    <div className="defaults-item">
+                      <span className="defaults-label">I care about:</span>
+                      <span className="defaults-value">clean UX and thoughtful details</span>
+                    </div>
+                    <div className="defaults-item">
+                      <span className="defaults-label">I enjoy:</span>
+                      <span className="defaults-value">problem-solving and making things work</span>
+                    </div>
+                    <div className="defaults-item">
+                      <span className="defaults-label">Currently learning:</span>
+                      <span className="defaults-value">React, TypeScript, and modern frontend patterns</span>
+                    </div>
+                    <div className="defaults-item defaults-item-last">
+                      <span className="defaults-label">Strength:</span>
+                      <span className="defaults-value">explaining ideas clearly and collaborating with others</span>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </ScrollReveal>
           </div>
@@ -577,13 +567,169 @@ export default function HomePage() {
       </ParallaxSection>
       
       <style>{`
+        /* About Section */
+        .about-section {
+          background-color: #0B0B0F;
+          padding: 6rem 0;
+          border-top: 1px solid #2A2A35;
+        }
+
+        .about-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
+        }
+
+        .about-header {
+          margin-bottom: 3rem;
+        }
+
+        .about-header h2 {
+          margin-bottom: 1rem;
+        }
+
+        .about-hook {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          color: #A1A1AA;
+          font-weight: 400;
+          max-width: 42rem;
+        }
+
+        .about-content {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .about-photo-column {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .about-photo-wrapper {
+          position: relative;
+          width: fit-content;
+        }
+
+        .about-photo-glow {
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(79, 125, 255, 0.12) 0%, transparent 70%);
+          filter: blur(20px);
+          z-index: 0;
+        }
+
+        .about-photo {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid rgba(79, 125, 255, 0.2);
+          position: relative;
+          z-index: 1;
+        }
+
+        .about-caption {
+          font-size: 0.875rem;
+          color: #A1A1AA;
+          text-align: center;
+          width: 200px;
+        }
+
+        .about-text-column {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .defaults-card {
+          background: linear-gradient(135deg, rgba(79, 125, 255, 0.03) 0%, rgba(79, 125, 255, 0.01) 100%);
+          border: 1px solid rgba(79, 125, 255, 0.15);
+          border-radius: 12px;
+          padding: 2rem;
+          backdrop-filter: blur(8px);
+        }
+
+        .defaults-title {
+          font-size: 1.125rem;
+          color: #EDEDED;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          letter-spacing: -0.01em;
+        }
+
+        .defaults-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .defaults-item {
+          display: flex;
+          gap: 1rem;
+          padding: 0.75rem 0;
+          border-bottom: 1px solid rgba(79, 125, 255, 0.08);
+        }
+
+        .defaults-item-last {
+          border-bottom: none;
+        }
+
+        .defaults-label {
+          color: #4F7DFF;
+          font-weight: 600;
+          min-width: 140px;
+          font-size: 0.9375rem;
+          flex-shrink: 0;
+        }
+
+        .defaults-value {
+          color: #EDEDED;
+          font-size: 0.9375rem;
+          line-height: 1.5;
+        }
+
+        .about-proof {
+          font-size: 0.9375rem;
+          line-height: 1.6;
+          color: #A1A1AA;
+          font-style: italic;
+        }
+
         @media (min-width: 768px) {
           .hero-section { padding: 8rem 2rem !important; }
           .hero-subtitle { font-size: 1.5rem !important; }
           .projects-section, .experience-section, .skills-section, .cta-section { padding: 6rem 0 !important; }
           .projects-grid, .experience-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          .about-grid { grid-template-columns: 300px 1fr !important; }
-          .about-image { justify-content: flex-start !important; }
+          
+          /* About Section Desktop Layout */
+          .about-content {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 3rem;
+            align-items: center;
+          }
+
+          .about-photo-column {
+            align-items: flex-start;
+            justify-self: center;
+          }
+
+          .about-photo {
+            width: 240px;
+            height: 240px;
+          }
+
+          .about-caption {
+            width: 240px;
+          }
         }
       `}</style>
     </div>
