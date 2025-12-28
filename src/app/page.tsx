@@ -430,7 +430,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#9D7DFF', 
+                      color: '#CA79FC', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -498,7 +498,7 @@ export default function HomePage() {
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '0.5rem', 
-                      color: '#9D7DFF', 
+                      color: '#CA79FC', 
                       transition: 'gap 0.3s' 
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'}
@@ -549,13 +549,13 @@ export default function HomePage() {
                     alignItems: 'center', 
                     gap: '0.5rem', 
                     padding: '1rem 2rem', 
-                    backgroundColor: '#9D7DFF', 
+                    backgroundColor: '#CA79FC', 
                     color: '#EDEDED', 
                     borderRadius: '0.5rem', 
                     transition: 'background-color 0.2s' 
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3D6AE6'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9D7DFF'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#CA79FC'}
                 >
                   <span>Get in touch</span>
                   <ArrowRight size={20} />
@@ -622,7 +622,7 @@ export default function HomePage() {
           right: -10px;
           bottom: -10px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(157, 125, 255, 0.12) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(202, 121, 252, 0.12) 0%, transparent 70%);
           filter: blur(20px);
           z-index: 0;
         }
@@ -632,7 +632,7 @@ export default function HomePage() {
           height: 200px;
           border-radius: 50%;
           object-fit: cover;
-          border: 2px solid rgba(157, 125, 255, 0.2);
+          border: 2px solid rgba(202, 121, 252, 0.2);
           position: relative;
           z-index: 1;
         }
@@ -651,8 +651,8 @@ export default function HomePage() {
         }
 
         .defaults-card {
-          background: linear-gradient(135deg, rgba(157, 125, 255, 0.03) 0%, rgba(157, 125, 255, 0.01) 100%);
-          border: 1px solid rgba(157, 125, 255, 0.15);
+          background: linear-gradient(135deg, rgba(202, 121, 252, 0.03) 0%, rgba(202, 121, 252, 0.01) 100%);
+          border: 1px solid rgba(202, 121, 252, 0.15);
           border-radius: 12px;
           padding: 2rem;
           backdrop-filter: blur(8px);
@@ -676,7 +676,7 @@ export default function HomePage() {
           display: flex;
           gap: 1rem;
           padding: 0.75rem 0;
-          border-bottom: 1px solid rgba(157, 125, 255, 0.08);
+          border-bottom: 1px solid rgba(202, 121, 252, 0.08);
         }
 
         .defaults-item-last {
@@ -684,7 +684,7 @@ export default function HomePage() {
         }
 
         .defaults-label {
-          color: #9D7DFF;
+          color: #CA79FC;
           font-weight: 600;
           min-width: 140px;
           font-size: 0.9375rem;
